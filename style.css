@@ -1,0 +1,397 @@
+/*to put all of the pages in a box modell */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.restaurant-cover {
+	background-color: rgb(46, 37, 37);
+    background-image: url("/images/coverPic2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+	background-position: 50% 50%;
+	position: relative;
+}
+
+.textOnCover {
+    font-size: 56px;
+    font-weight: bold;
+    font-family: fantasy;
+    color:  #dbd06b; 
+    position: absolute;
+    left: 7%;
+	bottom: 60%;
+	text-shadow: 2px 1px 1px black;
+}
+
+.galleryCover {
+	background-color: rgb(129, 15, 15);
+    background-image: url("/images/galleryCover.jpg");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    background-position: 50% 60%;
+}
+
+.textOnGalleryCover {
+    position: absolute;
+    font-size: 56px;
+    font-weight: bold;
+    font-family: fantasy;
+    color:  #dbd06b; 
+    position: absolute;
+    left: 58%;
+	bottom: 68%;
+	text-shadow: 2px 1px 1px black;
+}
+
+.menuPageCover  {
+	background-color: #dbd06b;
+    background-image: url("/images/menu-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+	height: 60vh;
+    background-position: 23% 30%;
+    position: relative;
+}
+
+.text-on-menu-page-cover {
+    position: absolute;
+    font-size: 56px;
+    font-weight: bold;
+    font-family: fantasy;
+    color:  #dbd06b; 
+    left: 63%;
+	bottom: 75%;
+	text-shadow: 3px 3px 2px black;
+}
+
+body {
+    background-color: rgb(245, 238, 227);
+    line-height: 1.14;
+	padding-top: 0;
+    word-spacing: 3px;
+}
+
+/*styling for nav menu */
+
+/*this one is probably not needed*/
+/*nav {
+	position: relative;
+	display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+*/
+header nav > ul {
+    background-color: #dbd06b;
+	width: 100%;  
+    padding: 0px 40px;  
+    display: flex;
+    justify-content: center;
+}
+
+/*float in menu */
+header li {
+    float: left;
+}
+/*clearfix for float */
+header ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header li a {
+    display: block;
+    padding: 10px;
+    color: #350303;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+
+.menyer {
+    cursor: none;
+}
+
+/*styling av sub menus*/
+header li ul {
+    position: absolute;
+    margin: 0;
+    width: auto;
+    z-index: 1;
+}
+
+header li ul li {
+    float: none;
+}
+
+header li ul li a {
+    padding: 5px 10px;
+}
+
+header li ul {
+    display: none;
+}
+
+header ul li:hover ul {
+	display: block;
+}
+
+header ul li:hover a,
+header ul li:hover ul li:hover a {
+	color: #dbd06b;
+	background-color:  #350303;
+}
+header ul li:hover ul a{
+    color: #350303;
+    background-color:  #dbd06b;
+}
+
+.active {
+	color: #3B5998;
+}
+
+/*styling for everything in between the main tags */
+/*main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+*/
+
+/*text about the restaurant on the index page */
+
+.h2 {
+    font-family: fantasy;
+    line-height: 1.3;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 0px;
+	padding-bottom: 23px;
+	margin-top: 0;
+}
+
+.restaurangtext {
+    display: inline-block;
+    width: 62%;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-top: 53px;
+    margin-right:33px;
+    margin-bottom: 5px;
+    margin-left: 29px;
+    columns: 90px 2;
+    column-gap: 30px;
+}
+
+.öppetider {
+    display: inline-block;
+    width: 24%;
+    margin-top: 53px;
+    margin-right: 24px;
+    margin-bottom: 5px;
+    font-family: fantasy;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    vertical-align: top;
+    background-color: rgb(247, 231, 206);
+    padding-bottom: 30px;
+    /*padding-right: 0;*/
+    padding-top: 30px;
+}
+
+/*gallery styling clears the float for element after gallery tags */
+.gallery::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.gallery {
+    padding: 5px;
+}
+
+/*styling for all pictures */
+figure {
+    position: relative;
+    display: block;
+    margin: 5px;
+    float: left;
+    width: calc(25% - 10px);
+    line-height: 0;
+}
+/*1/4 size picture */
+.oneQuater-size {
+    width: calc(25% - 10px);
+    height: 25%;
+}
+/*1/2 size picture */
+.Half-size {
+    width: calc(50% - 10px);
+    height: 50%;
+}
+
+/*1/5 size picture */
+.oneFifth-size {
+    width: calc(20% - 10px);
+    height: 20%;
+}
+
+/*3/5 size picture */
+.threeFifth-size {
+    width: calc(60% - 10px);
+    height: 60%;
+}
+
+.changedToFit {
+	width:calc(40% - 10px);
+	height: 25%;
+}
+
+/*text on pictures */
+figcaption {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgb a(0, 0, 0, 0.5);
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-size: 18px;
+	font-family: 'Lora', serif;
+	padding: 5px;
+	text-align: center;
+	line-height: 1.14;
+}
+
+/*to hide and show the text on the pictures */
+figure:hover figcaption {
+	display: block;
+}
+
+/*so that none of the pictures becomes bigger than its parent */
+figure img {
+	width: 100%;
+	border-radius: 15px;
+}
+
+/*menu page styling*/
+/*veckans lunch styling*/
+#menu {
+    font-family: fantasy;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 53px;
+    margin-left: 89px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.menu {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px whitesmoke;
+    
+}
+.menuEn {
+    display: none;
+}
+
+h4 {
+    font-size: 33px;
+    font-family: 'Lora', serif;
+    margin-top: 20px;
+    margin-left: 100px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+h5 {
+    font-size: 23px;
+    font-family: 'Lora', serif;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: 100px;
+   
+}
+
+.meal-desc {
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    margin-bottom: 13px;
+    margin-left: 100px;
+    line-height: 1.5;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+   
+#translateSv, #translateEn {
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #dbd06b;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 16px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 9px;
+    box-shadow: 0 1px 1px 0 rgb(123, 128, 138), 0 1px 1px 0 rgb(123 126 148);
+    position: fixed;
+        top: 450px;
+        right: 50px;
+}
+/*back to top styling*/
+#top {
+    display: block;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+    color: #350303;
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+
+footer {
+    font-family: fantasy;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+	background-color: rgb(247, 231, 206);
+	line-height: 1.5;
+}
+/* social media buttons styling */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+	padding: 5px 8px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    padding: 5px;
+}
+
+.fa-instagram {
+    background: #ff0000;
+    color: white;
+    padding: 5px;
+}
